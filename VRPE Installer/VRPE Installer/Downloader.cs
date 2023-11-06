@@ -168,7 +168,7 @@ namespace VRPE_Installer
 
         public static async Task<bool> GetShortcutMaker(string selectedPathShortcutMaker, string fixPath)
         {
-            var downloadFileUrl = "https://wiki.vrpirates.club/downloads/shortcut_maker.zip";
+            var downloadFileUrl = "https://vrpirates.wiki/downloads/shortcut_maker.zip";
             var destinationFilePathShortcutMaker = Path.GetFullPath($"{selectedPathShortcutMaker}{fixPath}ShortcutMaker.zip");
             try
             {
@@ -184,54 +184,6 @@ namespace VRPE_Installer
                 MessageBoxes.exceptionMessage = ex.Message;
                 MessageBoxes.DownloadError();
                 return false;
-            }
-        }
-
-        // Checks which architecture the user is on and downloads the correct Installer exe
-
-        public static async Task<bool> GetResilio(string selectedPathResilio, string fixPath)
-        {
-            if (!Environment.Is64BitOperatingSystem)
-            {
-                var downloadFileUrl = "https://download-cdn.resilio.com/stable/windows/Resilio-Sync.exe";
-                var destinationFilePathResilio = Path.GetFullPath($"{selectedPathResilio}{fixPath}Resilio-Sync.exe");
-                try
-                {
-                    using (var client = new HttpClientDownloadWithProgress(downloadFileUrl, destinationFilePathResilio))
-                    {
-                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                        await client.StartDownload();
-                        Process.Start($"{selectedPathResilio}{fixPath}Resilio-Sync.exe");
-                    }
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBoxes.exceptionMessage = ex.Message;
-                    MessageBoxes.DownloadError();
-                    return false;
-                }
-            }
-            else
-            {
-                var downloadFileUrl64 = "https://download-cdn.resilio.com/stable/windows64/Resilio-Sync_x64.exe";
-                var destinationFilePathResilio64 = Path.GetFullPath($"{selectedPathResilio}{fixPath}Resilio-Sync_64.exe");
-                try
-                {
-                    using (var client = new HttpClientDownloadWithProgress(downloadFileUrl64, destinationFilePathResilio64))
-                    {
-                        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                        await client.StartDownload();
-                        Process.Start($"{selectedPathResilio}{fixPath}Resilio-Sync_64.exe");
-                    }
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBoxes.exceptionMessage = ex.Message;
-                    MessageBoxes.DownloadError();
-                    return false;
-                }
             }
         }
     }

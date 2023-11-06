@@ -11,7 +11,7 @@ namespace VRPE_Installer
     {
         public static string Repostory { get; set; }
 
-        public static readonly string LocalVersion = "2.4";
+        public static readonly string LocalVersion = "2.5";
         public static string currentVersion = string.Empty;
         public static string changelog = string.Empty;
 

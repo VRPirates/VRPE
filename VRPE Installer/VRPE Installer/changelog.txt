@@ -1,3 +1,5 @@
-VRPE-Installer Version 2.4
+VRPE-Installer Version 2.5
 
-- Point to new repository
+- Remove Resilio
+- Point issue posts towards new repository
+- Change links to new wiki

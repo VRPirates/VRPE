@@ -35,11 +35,19 @@
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.themeChangerButton = new VRPE_Installer.CustomButton();
+            this.backButton = new VRPE_Installer.CustomButton();
+            this.nextButton = new VRPE_Installer.CustomButton();
+            this.rookiePathOpen = new VRPE_Installer.CustomButton();
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.rookieButton = new VRPE_Installer.CustomButton();
+            this.rookiePCVRButton = new VRPE_Installer.CustomButton();
+            this.vrpguiButton = new VRPE_Installer.CustomButton();
+            this.shortcutmakerButton = new VRPE_Installer.CustomButton();
             this.rookiePathLabel = new System.Windows.Forms.Label();
             this.wikiLink = new System.Windows.Forms.LinkLabel();
-            this.resilioPathCheckbox = new System.Windows.Forms.CheckBox();
+            this.LaunchRookie = new VRPE_Installer.CustomButton();
             this.downloadProgress = new System.Windows.Forms.ProgressBar();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.rookieFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
@@ -61,16 +69,6 @@
             this.rainbowBorder = new System.Windows.Forms.Timer(this.components);
             this.shortcutmakerFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.shortcutmakerToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.themeChangerButton = new VRPE_Installer.CustomButton();
-            this.backButton = new VRPE_Installer.CustomButton();
-            this.nextButton = new VRPE_Installer.CustomButton();
-            this.rookiePathOpen = new VRPE_Installer.CustomButton();
-            this.rookieButton = new VRPE_Installer.CustomButton();
-            this.rookiePCVRButton = new VRPE_Installer.CustomButton();
-            this.vrpguiButton = new VRPE_Installer.CustomButton();
-            this.shortcutmakerButton = new VRPE_Installer.CustomButton();
-            this.resilioButton = new VRPE_Installer.CustomButton();
-            this.LaunchRookie = new VRPE_Installer.CustomButton();
             this.titleBar.SuspendLayout();
             this.contentPanel.SuspendLayout();
             this.flowPanel.SuspendLayout();
@@ -149,7 +147,6 @@
             this.contentPanel.Controls.Add(this.rookiePathLabel);
             this.contentPanel.Controls.Add(this.wikiLink);
             this.contentPanel.Controls.Add(this.LaunchRookie);
-            this.contentPanel.Controls.Add(this.resilioPathCheckbox);
             this.contentPanel.Controls.Add(this.downloadProgress);
             this.contentPanel.Controls.Add(this.welcomeLabel);
             this.contentPanel.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,6 +156,100 @@
             this.contentPanel.Size = new System.Drawing.Size(844, 359);
             this.contentPanel.TabIndex = 2;
             // 
+            // themeChangerButton
+            // 
+            this.themeChangerButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.themeChangerButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.themeChangerButton.BackColor = System.Drawing.Color.Transparent;
+            this.themeChangerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.themeChangerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.themeChangerButton.ForeColor = System.Drawing.Color.White;
+            this.themeChangerButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.themeChangerButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.themeChangerButton.Location = new System.Drawing.Point(3, 326);
+            this.themeChangerButton.Name = "themeChangerButton";
+            this.themeChangerButton.Radius = 5;
+            this.themeChangerButton.Size = new System.Drawing.Size(117, 28);
+            this.themeChangerButton.Stroke = true;
+            this.themeChangerButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.themeChangerButton.TabIndex = 26;
+            this.themeChangerButton.Text = "LIGHT MODE";
+            this.themeChangerButton.Transparency = false;
+            this.themeChangerButton.Click += new System.EventHandler(this.themeChangerButton_Click);
+            this.themeChangerButton.MouseEnter += new System.EventHandler(this.themeChangerButton_MouseEnter);
+            this.themeChangerButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // backButton
+            // 
+            this.backButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.backButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.backButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.backButton.ForeColor = System.Drawing.Color.White;
+            this.backButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.backButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.backButton.Location = new System.Drawing.Point(767, 326);
+            this.backButton.Name = "backButton";
+            this.backButton.Radius = 5;
+            this.backButton.Size = new System.Drawing.Size(72, 28);
+            this.backButton.Stroke = true;
+            this.backButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.backButton.TabIndex = 25;
+            this.backButton.Text = "BACK";
+            this.backButton.Transparency = false;
+            this.backButton.Visible = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            this.backButton.MouseEnter += new System.EventHandler(this.backButton_MouseEnter);
+            this.backButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // nextButton
+            // 
+            this.nextButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.nextButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.nextButton.BackColor = System.Drawing.Color.Transparent;
+            this.nextButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.nextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.nextButton.ForeColor = System.Drawing.Color.White;
+            this.nextButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.nextButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.nextButton.Location = new System.Drawing.Point(767, 326);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Radius = 5;
+            this.nextButton.Size = new System.Drawing.Size(72, 28);
+            this.nextButton.Stroke = true;
+            this.nextButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.nextButton.TabIndex = 24;
+            this.nextButton.Text = "NEXT";
+            this.nextButton.Transparency = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            this.nextButton.MouseEnter += new System.EventHandler(this.nextButton_MouseEnter);
+            this.nextButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // rookiePathOpen
+            // 
+            this.rookiePathOpen.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookiePathOpen.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookiePathOpen.BackColor = System.Drawing.Color.Transparent;
+            this.rookiePathOpen.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.rookiePathOpen.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.rookiePathOpen.ForeColor = System.Drawing.Color.White;
+            this.rookiePathOpen.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookiePathOpen.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookiePathOpen.Location = new System.Drawing.Point(3, 292);
+            this.rookiePathOpen.Name = "rookiePathOpen";
+            this.rookiePathOpen.Radius = 5;
+            this.rookiePathOpen.Size = new System.Drawing.Size(117, 28);
+            this.rookiePathOpen.Stroke = true;
+            this.rookiePathOpen.StrokeColor = System.Drawing.Color.Transparent;
+            this.rookiePathOpen.TabIndex = 23;
+            this.rookiePathOpen.Text = "OPEN PATH";
+            this.rookiePathOpen.Transparency = false;
+            this.rookiePathOpen.Visible = false;
+            this.rookiePathOpen.Click += new System.EventHandler(this.rookiePathOpen_Click);
+            this.rookiePathOpen.MouseEnter += new System.EventHandler(this.rookiePathOpen_MouseHover);
+            this.rookiePathOpen.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
             // flowPanel
             // 
             this.flowPanel.Controls.Add(this.label1);
@@ -166,11 +257,10 @@
             this.flowPanel.Controls.Add(this.rookiePCVRButton);
             this.flowPanel.Controls.Add(this.vrpguiButton);
             this.flowPanel.Controls.Add(this.shortcutmakerButton);
-            this.flowPanel.Controls.Add(this.resilioButton);
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowPanel.Location = new System.Drawing.Point(284, 6);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(266, 263);
+            this.flowPanel.Size = new System.Drawing.Size(266, 217);
             this.flowPanel.TabIndex = 17;
             this.flowPanel.TabStop = true;
             this.flowPanel.Visible = false;
@@ -189,6 +279,102 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "DOWNLOAD AND INSTALL";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rookieButton
+            // 
+            this.rookieButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookieButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookieButton.BackColor = System.Drawing.Color.Transparent;
+            this.rookieButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.rookieButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.rookieButton.ForeColor = System.Drawing.Color.White;
+            this.rookieButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookieButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookieButton.Location = new System.Drawing.Point(3, 38);
+            this.rookieButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.rookieButton.Name = "rookieButton";
+            this.rookieButton.Radius = 5;
+            this.rookieButton.Size = new System.Drawing.Size(263, 38);
+            this.rookieButton.Stroke = true;
+            this.rookieButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.rookieButton.TabIndex = 18;
+            this.rookieButton.Text = "ROOKIE";
+            this.rookieButton.Transparency = false;
+            this.rookieButton.Click += new System.EventHandler(this.rookieButton_Click);
+            this.rookieButton.MouseEnter += new System.EventHandler(this.rookieButton_MouseHover);
+            this.rookieButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // rookiePCVRButton
+            // 
+            this.rookiePCVRButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookiePCVRButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.rookiePCVRButton.BackColor = System.Drawing.Color.Transparent;
+            this.rookiePCVRButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.rookiePCVRButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.rookiePCVRButton.ForeColor = System.Drawing.Color.White;
+            this.rookiePCVRButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookiePCVRButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.rookiePCVRButton.Location = new System.Drawing.Point(3, 82);
+            this.rookiePCVRButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.rookiePCVRButton.Name = "rookiePCVRButton";
+            this.rookiePCVRButton.Radius = 5;
+            this.rookiePCVRButton.Size = new System.Drawing.Size(263, 38);
+            this.rookiePCVRButton.Stroke = true;
+            this.rookiePCVRButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.rookiePCVRButton.TabIndex = 22;
+            this.rookiePCVRButton.Text = "ROOKIE-PCVR";
+            this.rookiePCVRButton.Transparency = false;
+            this.rookiePCVRButton.Click += new System.EventHandler(this.rookiePCVRButton_Click);
+            this.rookiePCVRButton.MouseEnter += new System.EventHandler(this.rookiePCVRButton_MouseHover);
+            this.rookiePCVRButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // vrpguiButton
+            // 
+            this.vrpguiButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.vrpguiButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.vrpguiButton.BackColor = System.Drawing.Color.Transparent;
+            this.vrpguiButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.vrpguiButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.vrpguiButton.ForeColor = System.Drawing.Color.White;
+            this.vrpguiButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.vrpguiButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.vrpguiButton.Location = new System.Drawing.Point(3, 126);
+            this.vrpguiButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.vrpguiButton.Name = "vrpguiButton";
+            this.vrpguiButton.Radius = 5;
+            this.vrpguiButton.Size = new System.Drawing.Size(263, 38);
+            this.vrpguiButton.Stroke = true;
+            this.vrpguiButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.vrpguiButton.TabIndex = 19;
+            this.vrpguiButton.Text = "VRP-GUI";
+            this.vrpguiButton.Transparency = false;
+            this.vrpguiButton.Click += new System.EventHandler(this.vrpguiButton_Click);
+            this.vrpguiButton.MouseEnter += new System.EventHandler(this.vrpguiButton_MouseHover);
+            this.vrpguiButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
+            // 
+            // shortcutmakerButton
+            // 
+            this.shortcutmakerButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.shortcutmakerButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.shortcutmakerButton.BackColor = System.Drawing.Color.Transparent;
+            this.shortcutmakerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.shortcutmakerButton.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.shortcutmakerButton.ForeColor = System.Drawing.Color.White;
+            this.shortcutmakerButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.shortcutmakerButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.shortcutmakerButton.Location = new System.Drawing.Point(3, 170);
+            this.shortcutmakerButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.shortcutmakerButton.Name = "shortcutmakerButton";
+            this.shortcutmakerButton.Radius = 5;
+            this.shortcutmakerButton.Size = new System.Drawing.Size(263, 38);
+            this.shortcutmakerButton.Stroke = true;
+            this.shortcutmakerButton.StrokeColor = System.Drawing.Color.Transparent;
+            this.shortcutmakerButton.TabIndex = 20;
+            this.shortcutmakerButton.Text = "SHORTCUT MAKER";
+            this.shortcutmakerButton.Transparency = false;
+            this.shortcutmakerButton.Click += new System.EventHandler(this.shortcutmakerButton_Click);
+            this.shortcutmakerButton.MouseEnter += new System.EventHandler(this.shortcutmakerButton_MouseEnter);
+            this.shortcutmakerButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
             // 
             // rookiePathLabel
             // 
@@ -218,20 +404,29 @@
             this.wikiLink.Text = "Official Wiki Link";
             this.wikiLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.wikiLink_LinkClicked);
             // 
-            // resilioPathCheckbox
+            // LaunchRookie
             // 
-            this.resilioPathCheckbox.AutoSize = true;
-            this.resilioPathCheckbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resilioPathCheckbox.ForeColor = System.Drawing.Color.White;
-            this.resilioPathCheckbox.Location = new System.Drawing.Point(556, 229);
-            this.resilioPathCheckbox.Name = "resilioPathCheckbox";
-            this.resilioPathCheckbox.Size = new System.Drawing.Size(266, 25);
-            this.resilioPathCheckbox.TabIndex = 8;
-            this.resilioPathCheckbox.TabStop = false;
-            this.resilioPathCheckbox.Text = "Select Custom Download Location";
-            this.customFoldertooltip.SetToolTip(this.resilioPathCheckbox, "This will allow you to choose where the Resilio Installer gets downloaded into.");
-            this.resilioPathCheckbox.UseVisualStyleBackColor = true;
-            this.resilioPathCheckbox.Visible = false;
+            this.LaunchRookie.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.LaunchRookie.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.LaunchRookie.BackColor = System.Drawing.Color.Transparent;
+            this.LaunchRookie.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.LaunchRookie.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.LaunchRookie.ForeColor = System.Drawing.Color.White;
+            this.LaunchRookie.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.LaunchRookie.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.LaunchRookie.Location = new System.Drawing.Point(3, 258);
+            this.LaunchRookie.Name = "LaunchRookie";
+            this.LaunchRookie.Radius = 5;
+            this.LaunchRookie.Size = new System.Drawing.Size(117, 28);
+            this.LaunchRookie.Stroke = true;
+            this.LaunchRookie.StrokeColor = System.Drawing.Color.Transparent;
+            this.LaunchRookie.TabIndex = 22;
+            this.LaunchRookie.Text = "LAUNCH ROOKIE";
+            this.LaunchRookie.Transparency = false;
+            this.LaunchRookie.Visible = false;
+            this.LaunchRookie.Click += new System.EventHandler(this.LaunchRookie_Click);
+            this.LaunchRookie.MouseEnter += new System.EventHandler(this.LaunchRookie_MouseHover);
+            this.LaunchRookie.MouseLeave += new System.EventHandler(this.stopHoverEffect);
             // 
             // downloadProgress
             // 
@@ -351,244 +546,6 @@
             this.shortcutmakerToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.shortcutmakerToolTip.ToolTipTitle = "Downloads";
             // 
-            // themeChangerButton
-            // 
-            this.themeChangerButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.themeChangerButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.themeChangerButton.BackColor = System.Drawing.Color.Transparent;
-            this.themeChangerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.themeChangerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.themeChangerButton.ForeColor = System.Drawing.Color.White;
-            this.themeChangerButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.themeChangerButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.themeChangerButton.Location = new System.Drawing.Point(3, 326);
-            this.themeChangerButton.Name = "themeChangerButton";
-            this.themeChangerButton.Radius = 5;
-            this.themeChangerButton.Size = new System.Drawing.Size(117, 28);
-            this.themeChangerButton.Stroke = true;
-            this.themeChangerButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.themeChangerButton.TabIndex = 26;
-            this.themeChangerButton.Text = "LIGHT MODE";
-            this.themeChangerButton.Transparency = false;
-            this.themeChangerButton.Click += new System.EventHandler(this.themeChangerButton_Click);
-            this.themeChangerButton.MouseEnter += new System.EventHandler(this.themeChangerButton_MouseEnter);
-            this.themeChangerButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // backButton
-            // 
-            this.backButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.backButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.backButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.backButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.backButton.Location = new System.Drawing.Point(767, 326);
-            this.backButton.Name = "backButton";
-            this.backButton.Radius = 5;
-            this.backButton.Size = new System.Drawing.Size(72, 28);
-            this.backButton.Stroke = true;
-            this.backButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.backButton.TabIndex = 25;
-            this.backButton.Text = "BACK";
-            this.backButton.Transparency = false;
-            this.backButton.Visible = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            this.backButton.MouseEnter += new System.EventHandler(this.backButton_MouseEnter);
-            this.backButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // nextButton
-            // 
-            this.nextButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.nextButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.nextButton.BackColor = System.Drawing.Color.Transparent;
-            this.nextButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.nextButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.nextButton.ForeColor = System.Drawing.Color.White;
-            this.nextButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.nextButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.nextButton.Location = new System.Drawing.Point(767, 326);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Radius = 5;
-            this.nextButton.Size = new System.Drawing.Size(72, 28);
-            this.nextButton.Stroke = true;
-            this.nextButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.nextButton.TabIndex = 24;
-            this.nextButton.Text = "NEXT";
-            this.nextButton.Transparency = false;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            this.nextButton.MouseEnter += new System.EventHandler(this.nextButton_MouseEnter);
-            this.nextButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // rookiePathOpen
-            // 
-            this.rookiePathOpen.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePathOpen.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePathOpen.BackColor = System.Drawing.Color.Transparent;
-            this.rookiePathOpen.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.rookiePathOpen.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.rookiePathOpen.ForeColor = System.Drawing.Color.White;
-            this.rookiePathOpen.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePathOpen.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePathOpen.Location = new System.Drawing.Point(3, 292);
-            this.rookiePathOpen.Name = "rookiePathOpen";
-            this.rookiePathOpen.Radius = 5;
-            this.rookiePathOpen.Size = new System.Drawing.Size(117, 28);
-            this.rookiePathOpen.Stroke = true;
-            this.rookiePathOpen.StrokeColor = System.Drawing.Color.Transparent;
-            this.rookiePathOpen.TabIndex = 23;
-            this.rookiePathOpen.Text = "OPEN PATH";
-            this.rookiePathOpen.Transparency = false;
-            this.rookiePathOpen.Visible = false;
-            this.rookiePathOpen.Click += new System.EventHandler(this.rookiePathOpen_Click);
-            this.rookiePathOpen.MouseEnter += new System.EventHandler(this.rookiePathOpen_MouseHover);
-            this.rookiePathOpen.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // rookieButton
-            // 
-            this.rookieButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookieButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookieButton.BackColor = System.Drawing.Color.Transparent;
-            this.rookieButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.rookieButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.rookieButton.ForeColor = System.Drawing.Color.White;
-            this.rookieButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookieButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookieButton.Location = new System.Drawing.Point(3, 38);
-            this.rookieButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.rookieButton.Name = "rookieButton";
-            this.rookieButton.Radius = 5;
-            this.rookieButton.Size = new System.Drawing.Size(263, 38);
-            this.rookieButton.Stroke = true;
-            this.rookieButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.rookieButton.TabIndex = 18;
-            this.rookieButton.Text = "ROOKIE";
-            this.rookieButton.Transparency = false;
-            this.rookieButton.Click += new System.EventHandler(this.rookieButton_Click);
-            this.rookieButton.MouseEnter += new System.EventHandler(this.rookieButton_MouseHover);
-            this.rookieButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // rookiePCVRButton
-            // 
-            this.rookiePCVRButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePCVRButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePCVRButton.BackColor = System.Drawing.Color.Transparent;
-            this.rookiePCVRButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.rookiePCVRButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.rookiePCVRButton.ForeColor = System.Drawing.Color.White;
-            this.rookiePCVRButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePCVRButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePCVRButton.Location = new System.Drawing.Point(3, 82);
-            this.rookiePCVRButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.rookiePCVRButton.Name = "rookiePCVRButton";
-            this.rookiePCVRButton.Radius = 5;
-            this.rookiePCVRButton.Size = new System.Drawing.Size(263, 38);
-            this.rookiePCVRButton.Stroke = true;
-            this.rookiePCVRButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.rookiePCVRButton.TabIndex = 22;
-            this.rookiePCVRButton.Text = "ROOKIE-PCVR";
-            this.rookiePCVRButton.Transparency = false;
-            this.rookiePCVRButton.Click += new System.EventHandler(this.rookiePCVRButton_Click);
-            this.rookiePCVRButton.MouseEnter += new System.EventHandler(this.rookiePCVRButton_MouseHover);
-            this.rookiePCVRButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // vrpguiButton
-            // 
-            this.vrpguiButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.vrpguiButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.vrpguiButton.BackColor = System.Drawing.Color.Transparent;
-            this.vrpguiButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.vrpguiButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.vrpguiButton.ForeColor = System.Drawing.Color.White;
-            this.vrpguiButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.vrpguiButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.vrpguiButton.Location = new System.Drawing.Point(3, 126);
-            this.vrpguiButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.vrpguiButton.Name = "vrpguiButton";
-            this.vrpguiButton.Radius = 5;
-            this.vrpguiButton.Size = new System.Drawing.Size(263, 38);
-            this.vrpguiButton.Stroke = true;
-            this.vrpguiButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.vrpguiButton.TabIndex = 19;
-            this.vrpguiButton.Text = "VRP-GUI";
-            this.vrpguiButton.Transparency = false;
-            this.vrpguiButton.Click += new System.EventHandler(this.vrpguiButton_Click);
-            this.vrpguiButton.MouseEnter += new System.EventHandler(this.vrpguiButton_MouseHover);
-            this.vrpguiButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // shortcutmakerButton
-            // 
-            this.shortcutmakerButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.shortcutmakerButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.shortcutmakerButton.BackColor = System.Drawing.Color.Transparent;
-            this.shortcutmakerButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.shortcutmakerButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.shortcutmakerButton.ForeColor = System.Drawing.Color.White;
-            this.shortcutmakerButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.shortcutmakerButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.shortcutmakerButton.Location = new System.Drawing.Point(3, 170);
-            this.shortcutmakerButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.shortcutmakerButton.Name = "shortcutmakerButton";
-            this.shortcutmakerButton.Radius = 5;
-            this.shortcutmakerButton.Size = new System.Drawing.Size(263, 38);
-            this.shortcutmakerButton.Stroke = true;
-            this.shortcutmakerButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.shortcutmakerButton.TabIndex = 20;
-            this.shortcutmakerButton.Text = "SHORTCUT MAKER";
-            this.shortcutmakerButton.Transparency = false;
-            this.shortcutmakerButton.Click += new System.EventHandler(this.shortcutmakerButton_Click);
-            this.shortcutmakerButton.MouseEnter += new System.EventHandler(this.shortcutmakerButton_MouseEnter);
-            this.shortcutmakerButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // resilioButton
-            // 
-            this.resilioButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.resilioButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.resilioButton.BackColor = System.Drawing.Color.Transparent;
-            this.resilioButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.resilioButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.resilioButton.ForeColor = System.Drawing.Color.White;
-            this.resilioButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.resilioButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.resilioButton.Location = new System.Drawing.Point(3, 214);
-            this.resilioButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.resilioButton.Name = "resilioButton";
-            this.resilioButton.Radius = 5;
-            this.resilioButton.Size = new System.Drawing.Size(263, 38);
-            this.resilioButton.Stroke = true;
-            this.resilioButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.resilioButton.TabIndex = 21;
-            this.resilioButton.Text = "RESILIO SYNC";
-            this.resilioButton.Transparency = false;
-            this.resilioButton.Click += new System.EventHandler(this.resilioButton_Click);
-            this.resilioButton.MouseEnter += new System.EventHandler(this.resilioButton_MouseHover);
-            this.resilioButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
-            // LaunchRookie
-            // 
-            this.LaunchRookie.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.LaunchRookie.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.LaunchRookie.BackColor = System.Drawing.Color.Transparent;
-            this.LaunchRookie.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.LaunchRookie.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.LaunchRookie.ForeColor = System.Drawing.Color.White;
-            this.LaunchRookie.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.LaunchRookie.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.LaunchRookie.Location = new System.Drawing.Point(3, 258);
-            this.LaunchRookie.Name = "LaunchRookie";
-            this.LaunchRookie.Radius = 5;
-            this.LaunchRookie.Size = new System.Drawing.Size(117, 28);
-            this.LaunchRookie.Stroke = true;
-            this.LaunchRookie.StrokeColor = System.Drawing.Color.Transparent;
-            this.LaunchRookie.TabIndex = 22;
-            this.LaunchRookie.Text = "LAUNCH ROOKIE";
-            this.LaunchRookie.Transparency = false;
-            this.LaunchRookie.Visible = false;
-            this.LaunchRookie.Click += new System.EventHandler(this.LaunchRookie_Click);
-            this.LaunchRookie.MouseEnter += new System.EventHandler(this.LaunchRookie_MouseHover);
-            this.LaunchRookie.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -632,7 +589,6 @@
         public System.Windows.Forms.ProgressBar downloadProgress;
         private System.Windows.Forms.FolderBrowserDialog vrpGUIFolderDialog;
         private System.Windows.Forms.FolderBrowserDialog resilioFolderDialog;
-        private System.Windows.Forms.CheckBox resilioPathCheckbox;
         private System.Windows.Forms.LinkLabel wikiLink;
         private System.Windows.Forms.ToolTip resiliotoolTip;
         private System.Windows.Forms.ToolTip rookietoolTip;
@@ -652,7 +608,6 @@
         private System.Windows.Forms.ToolTip shortcutmakerToolTip;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowPanel;
-        private CustomButton resilioButton;
         private CustomButton shortcutmakerButton;
         private CustomButton vrpguiButton;
         private CustomButton rookieButton;

@@ -18,7 +18,7 @@ namespace VRPE_Installer
             Exception exception = (Exception)e.ExceptionObject;
             var message = exception.Message;
 
-            FlexibleMessageBox.Show($"Exception Message: {message}\r\rPlease post your issue here: https://github.com/Chax1/VRPE-Installer/issues", "Error during runtime!", MessageBoxButtons.OK,
+            FlexibleMessageBox.Show($"Exception Message: {message}\r\rPlease post your issue here: https://github.com/VRPirates/VRPE/issues", "Error during runtime!", MessageBoxButtons.OK,
             MessageBoxIcon.Warning);
 
         }
@@ -26,7 +26,7 @@ namespace VRPE_Installer
         private static void UnhandledUIException(object sender, ThreadExceptionEventArgs e)
         {
             Exception ex = e.Exception;
-            FlexibleMessageBox.Show($"Exception Message: {ex.Message}\r\rPlease post your issue here: https://github.com/Chax1/VRPE-Installer/issues", "Error during runtime!", MessageBoxButtons.OK,
+            FlexibleMessageBox.Show($"Exception Message: {ex.Message}\r\rPlease post your issue here: https://github.com/VRPirates/VRPE/issues", "Error during runtime!", MessageBoxButtons.OK,
             MessageBoxIcon.Warning);
         }
 
