@@ -1,5 +1,4 @@
-VRPE-Installer Version 2.5
+VRPE-Installer Version 2.6
 
-- Remove Resilio
-- Point issue posts towards new repository
-- Change links to new wiki
+- Remove Rookie-PCVR
+- Change global exception handler message

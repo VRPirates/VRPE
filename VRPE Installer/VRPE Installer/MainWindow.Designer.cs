@@ -42,7 +42,6 @@
             this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.rookieButton = new VRPE_Installer.CustomButton();
-            this.rookiePCVRButton = new VRPE_Installer.CustomButton();
             this.vrpguiButton = new VRPE_Installer.CustomButton();
             this.shortcutmakerButton = new VRPE_Installer.CustomButton();
             this.rookiePathLabel = new System.Windows.Forms.Label();
@@ -254,13 +253,12 @@
             // 
             this.flowPanel.Controls.Add(this.label1);
             this.flowPanel.Controls.Add(this.rookieButton);
-            this.flowPanel.Controls.Add(this.rookiePCVRButton);
             this.flowPanel.Controls.Add(this.vrpguiButton);
             this.flowPanel.Controls.Add(this.shortcutmakerButton);
             this.flowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowPanel.Location = new System.Drawing.Point(284, 6);
             this.flowPanel.Name = "flowPanel";
-            this.flowPanel.Size = new System.Drawing.Size(266, 217);
+            this.flowPanel.Size = new System.Drawing.Size(266, 173);
             this.flowPanel.TabIndex = 17;
             this.flowPanel.TabStop = true;
             this.flowPanel.Visible = false;
@@ -304,30 +302,6 @@
             this.rookieButton.MouseEnter += new System.EventHandler(this.rookieButton_MouseHover);
             this.rookieButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
             // 
-            // rookiePCVRButton
-            // 
-            this.rookiePCVRButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePCVRButton.Active2 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.rookiePCVRButton.BackColor = System.Drawing.Color.Transparent;
-            this.rookiePCVRButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.rookiePCVRButton.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.rookiePCVRButton.ForeColor = System.Drawing.Color.White;
-            this.rookiePCVRButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePCVRButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.rookiePCVRButton.Location = new System.Drawing.Point(3, 82);
-            this.rookiePCVRButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.rookiePCVRButton.Name = "rookiePCVRButton";
-            this.rookiePCVRButton.Radius = 5;
-            this.rookiePCVRButton.Size = new System.Drawing.Size(263, 38);
-            this.rookiePCVRButton.Stroke = true;
-            this.rookiePCVRButton.StrokeColor = System.Drawing.Color.Transparent;
-            this.rookiePCVRButton.TabIndex = 22;
-            this.rookiePCVRButton.Text = "ROOKIE-PCVR";
-            this.rookiePCVRButton.Transparency = false;
-            this.rookiePCVRButton.Click += new System.EventHandler(this.rookiePCVRButton_Click);
-            this.rookiePCVRButton.MouseEnter += new System.EventHandler(this.rookiePCVRButton_MouseHover);
-            this.rookiePCVRButton.MouseLeave += new System.EventHandler(this.stopHoverEffect);
-            // 
             // vrpguiButton
             // 
             this.vrpguiButton.Active1 = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
@@ -338,7 +312,7 @@
             this.vrpguiButton.ForeColor = System.Drawing.Color.White;
             this.vrpguiButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.vrpguiButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.vrpguiButton.Location = new System.Drawing.Point(3, 126);
+            this.vrpguiButton.Location = new System.Drawing.Point(3, 82);
             this.vrpguiButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.vrpguiButton.Name = "vrpguiButton";
             this.vrpguiButton.Radius = 5;
@@ -362,7 +336,7 @@
             this.shortcutmakerButton.ForeColor = System.Drawing.Color.White;
             this.shortcutmakerButton.Inactive1 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.shortcutmakerButton.Inactive2 = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.shortcutmakerButton.Location = new System.Drawing.Point(3, 170);
+            this.shortcutmakerButton.Location = new System.Drawing.Point(3, 126);
             this.shortcutmakerButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.shortcutmakerButton.Name = "shortcutmakerButton";
             this.shortcutmakerButton.Radius = 5;
@@ -617,6 +591,5 @@
         private CustomButton backButton;
         private System.Windows.Forms.Panel panel1;
         private CustomButton themeChangerButton;
-        private CustomButton rookiePCVRButton;
     }
 }

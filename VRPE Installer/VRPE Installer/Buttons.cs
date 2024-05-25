@@ -42,15 +42,5 @@ namespace VRPE_Installer
             };
             Process.Start(p);
         }
-
-        public static void rookiePCVRPathOpener(string rookiePCVRPath)
-        {
-            ProcessStartInfo p = new ProcessStartInfo
-            {
-                Arguments = rookiePCVRPath,
-                FileName = "explorer.exe"
-            };
-            Process.Start(p);
-        }
     }
 }
