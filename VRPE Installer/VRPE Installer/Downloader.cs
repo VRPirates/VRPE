@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing.Printing;
 using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 namespace VRPE_Installer
 {
     internal class Downloader
     {
+        private static string urlPattern = @"(?m)http(?:s?):\/\/.*?([^\.\/]+?\.[^\.]+?)(?:\/|$)";
         public class HttpClientDownloadWithProgress : IDisposable
         {
             private readonly string _downloadUrl;
@@ -91,7 +94,14 @@ namespace VRPE_Installer
             }
             catch (Exception ex)
             {
-                MessageBoxes.exceptionMessage = ex.Message;
+                Match match = Regex.Match(rookieDL, urlPattern);
+                string matchedString = match.Value;
+
+                MessageBoxes.exceptionMessage =
+                    $"Things you can try:\n" +
+                    $"Are you able to access {matchedString}\n" +
+                    $"Try changing your systems DNS to either CloudFlare/Google/OpenDNS\n" +
+                    $"Whitelist the VRPE in your firewall/antivirus";
                 MessageBoxes.DownloadError();
                 return false;
             }
@@ -136,7 +146,14 @@ namespace VRPE_Installer
             }
             catch (Exception ex)
             {
-                MessageBoxes.exceptionMessage = ex.Message;
+                Match match = Regex.Match(VRPGUIDL, urlPattern);
+                string matchedString = match.Value;
+
+                MessageBoxes.exceptionMessage =
+                    $"Things you can try:\n" +
+                    $"Are you able to access {matchedString}\n" +
+                    $"Try changing your systems DNS to either CloudFlare/Google/OpenDNS\n" +
+                    $"Whitelist the VRPE in your firewall/antivirus";
                 MessageBoxes.DownloadError();
                 return false;
             }
@@ -157,7 +174,14 @@ namespace VRPE_Installer
             }
             catch (Exception ex)
             {
-                MessageBoxes.exceptionMessage = ex.Message;
+                Match match = Regex.Match(downloadFileUrl, urlPattern);
+                string matchedString = match.Value;
+
+                MessageBoxes.exceptionMessage =
+                    $"Things you can try:\n" +
+                    $"Are you able to access {matchedString}\n" +
+                    $"Try changing your systems DNS to either CloudFlare/Google/OpenDNS\n" +
+                    $"Whitelist the VRPE in your firewall/antivirus";
                 MessageBoxes.DownloadError();
                 return false;
             }

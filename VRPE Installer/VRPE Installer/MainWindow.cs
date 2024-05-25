@@ -81,9 +81,17 @@ namespace VRPE_Installer
             Debug.WriteLine("\nINTERNET CONNECTION:" + INTERNETSTATE);
             #endif
             InitializeComponent();
-            int scaleValueWidth = 891 * (this.DeviceDpi / 96);
-            int scaleValueHeight = 502 * (this.DeviceDpi / 96);
-            Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, scaleValueWidth, scaleValueHeight, 25, 25));
+            try
+            {
+                int scaleValueWidth = 891 * (this.DeviceDpi / 96);
+                int scaleValueHeight = 502 * (this.DeviceDpi / 96);
+                Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, scaleValueWidth, scaleValueHeight, 25, 25));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("The VRPE failed to resize properly\n" +
+                    "If issues occur consider downloading the programs standalone from our wiki.", "Resize Issue", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             var RSLPATH = @"C:\RSL\";
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             rainbowBorder.Start();

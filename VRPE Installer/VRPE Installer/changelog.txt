@@ -1,4 +1,4 @@
-VRPE-Installer Version 2.6
+VRPE-Installer Version 2.7
 
-- Remove Rookie-PCVR
-- Change global exception handler message
+- Add try catch to resize
+- Change message for download catchblocks
